@@ -1,4 +1,8 @@
-﻿namespace COMP003A.LectureActivity5_1
+﻿// Author: Jason Salinas
+// Course: COMP003A
+// Faculty: Jonathan Cruz
+// Purpose: Demonstrate the creation and usage of classes in C#
+namespace COMP003A.LectureActivity5_1
 {
     internal class Car
     {
