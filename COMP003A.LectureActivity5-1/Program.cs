@@ -3,6 +3,7 @@
     internal class Car
     {
         // Fields
+        private static int carCount = 0;
         private string make;
         private string model;
         private int year;
@@ -35,6 +36,7 @@
             Make = make;
             Model = model;
             Year = year;
+            carCount++;
         }
 
         /// <summary>
@@ -43,6 +45,14 @@
         public void DisplayInfor()
         {
             Console.WriteLine($"Car: {Year} {Make} {Model}");
+        }
+
+        /// <summary>
+        /// Static propety to get the car count
+        /// </summary>
+        public static void DisplayCarCount()
+        {
+            Console.WriteLine($"Total cars created: {carCount}");
         }
     }
     internal class Program
@@ -56,6 +66,10 @@
             myCar.Model = "Corolla"; // Change the model of the car
             myCar.Year = 2020; // Change the year of the car
             myCar.DisplayInfor();
+
+            Car myCar2 = new Car("Ford", "Mustang", 2020);
+            Car myCar3 = new Car("Chevrolet", "Camaro", 2021);
+            Car.DisplayCarCount();
         }
     }
 
